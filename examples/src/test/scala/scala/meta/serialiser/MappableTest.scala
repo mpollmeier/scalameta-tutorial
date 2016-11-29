@@ -12,7 +12,7 @@ class MappableTest extends WordSpec with Matchers {
   "simple case class" should {
     "deserialise to map" in {
       val testInstance = SimpleCaseClass(i = 42, s = "something")
-      testInstance.toMap shouldBe 'empty
+      testInstance.toMap shouldBe Map("i" -> 42, "s" -> "something")
     }
   }
 
